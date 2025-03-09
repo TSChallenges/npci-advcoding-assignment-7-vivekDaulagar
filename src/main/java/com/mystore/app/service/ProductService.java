@@ -73,6 +73,52 @@ public class ProductService {
         return null;
     }
 
+	public List<Product> getProductByName(String name) {
+		
+		List<Product> list =new ArrayList<Product>(); 
+		// TODO Auto-generated method stub
+		for(Product p: products) {
+			if(p.getName().equalsIgnoreCase(name)) {
+				list.add(p);
+			}
+		}
+		return list;
+	}
+	
+	public List<Product> getProductByCategory(String category) {
+		// TODO Auto-generated method stub
+		List<Product> list =new ArrayList<Product>(); 
+		
+		for(Product p: products) {
+			if(p.getCategory().equalsIgnoreCase(category)) {
+				list.add(p);
+			}
+		}
+		return list;
+	}
+
+	public List<Product> getProductsByPriceRange(double minPrice, double maxPrice) {
+		// TODO Auto-generated method stub
+		List<Product> list =new ArrayList<Product>(); 
+		for(Product p: products) {
+			if(p.getPrice()>=minPrice && p.getPrice()<=maxPrice) {
+				list.add(p);
+			}
+		}
+		return list;
+	}
+
+	public List<Product> getProductsByStockQuantityRange(int minStock, int maxStock) {
+		// TODO Auto-generated method stub
+		List<Product> list =new ArrayList<Product>(); 
+		for(Product p: products) {
+			if(p.getStockQuantity()>=minStock && p.getStockQuantity()<=maxStock) {
+				list.add(p);
+			}
+		}
+		return list;
+	}
+
     // TODO: Method to search products by name
 
 
