@@ -97,7 +97,6 @@ public class ProductService {
 		return list;
 	}
 	
-
 	public List<Product> getProductsByPriceRange(double minPrice, double maxPrice) {
 		// TODO Auto-generated method stub
 		List<Product> list =new ArrayList<Product>(); 

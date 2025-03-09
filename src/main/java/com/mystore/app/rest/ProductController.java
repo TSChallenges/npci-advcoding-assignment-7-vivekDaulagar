@@ -92,7 +92,6 @@ public class ProductController {
         if (minPrice > maxPrice) {
             throw new IllegalArgumentException("Min price cannot be greater than max price.");
         }
-        
         return productService.getProductsByPriceRange(minPrice, maxPrice);
     }
 
